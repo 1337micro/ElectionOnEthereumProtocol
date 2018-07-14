@@ -4,7 +4,6 @@ contract AbuddinElection2018 {
     string[7] candidates  = ["Abstain","Conservative", "Liberal", "Socialist", "Communist", "Fascist","Libertarian"];
     mapping(bytes32 => bool) validShaHashes;
     mapping(uint8 => uint) tallies;
-
     function addAllValidShaHashes() private{
      validShaHashes[0x04BF3170DE8C838DE8C45640365200AE34F570C2E24C79791DC6302A3BF14476] = true;
      validShaHashes[0x8E79AB77EAB3205F7312E3BAF19E4EB0E31EACA7470C35F67F986E20C36E7DD4] = true;
