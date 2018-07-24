@@ -20,7 +20,7 @@ contract AbuddinElection2018 {
    }
     //Does the validShaHashes mapping have an entry accescodeHash => true
     //If no entry appears, then the accescodeHash is not valid and the voter provided an incorrect accescode
-    //if an entry appears but it is: accescodeHash => true, then this voter has already voted and is no longer elligible
+    //if an entry appears but it is: accescodeHash => false, then this voter has already voted and is no longer elligible
     function isHashValid(bytes32 accescodeHash) private view returns(bool){
         bool accescodeHashExists = validShaHashes[accescodeHash];
         return accescodeHashExists;
